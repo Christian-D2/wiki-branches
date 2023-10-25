@@ -16,10 +16,10 @@ SELECT * FROM 'urls' LIMIT 0,30
 
 Carefully copy all those rows into an Excel Macro enabled sheet. 
 Separate the columns into excel columns using seperate by space. I think it's called Text to Columns under the Data tab in Excel.
-Add coliumn titles and such, matching my History File.
+Add column titles and such, matching my History File.
 You can also add the actual date calculation but I never used that.
-Write a quick VBA script that deletes all rows not containing 'wikipedia'
-You may be able to aceses script in History2.xlsm.
+Write a quick VBA script that deletes all rows not containing 'wikipedia'.
+You may be able to access my script in History Only 2.xlsm.
 Then there is some manual filtering/deleting of rows to be done. For example deleting wiki picture URLs.
 
 Edit my python file a bit to use your excel document file path
@@ -28,3 +28,4 @@ Add your known starting page to the line: urlTree = treeClimber('https://en.wiki
 Run the python file. It takes a bit. Check and try to minimize unused link length.
 Once, you are happy, copy paste json tree into flare-2.json here:
 https://vizhub.com/Christian-D2/32e6f8836cac463888b16718c2ee01b7
+Be sure to ignore the loading lines |||
