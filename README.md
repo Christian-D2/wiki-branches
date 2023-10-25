@@ -1,5 +1,5 @@
 # wiki-branches
-Python script that takes an Excel document of Wikipedia pages and creates a JSON tree to show the paths taken on
+Python script that takes an Excel document of Wikipedia pages and creates a JSON tree to show the paths taken on Wikipedia. 
 
 
 First you need to locate your history file from your browser, roughly here:
