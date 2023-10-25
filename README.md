@@ -2,30 +2,29 @@
 Python script that takes an Excel document of Wikipedia pages and creates a JSON tree to show the paths taken on
 
 
-First you need to locate your history file from your browser
-roughly here:
+First you need to locate your history file from your browser, roughly here:
 C:\Users\USERNAME\AppData\Local\Microsoft\Edge\User_Data\Default should just be called history
 
-use this tool to actually read the jarbled mess of the history file
+Use this tool to actually read the jarbled mess of the history file.
 https://inloop.github.io/sqlite-viewer/
-this thread is helpful
+This thread is helpful for the following steps:
 https://www.reddit.com/r/edge/comments/qyyfus/is_it_possible_for_me_to_export_all_ms_edge/
 
-select urls in the drop down
-up the limit from 30 per page to the max you have
+Select urls in the drop down.
+Up the limit from 30 per page to the max urls you have.
 SELECT * FROM 'urls' LIMIT 0,30
 
-carefully copy all those rows into an Excel Macro enabled sheet. 
-separate the columns into excel columns using seperate by space. I think it's called Text to Columns under the data tab in Excel
-add titles and such, matching my History File.
-you can also add the real date calculation but I never used that
-Write a quick VBA script that take out all urls not containing 'wikipedia'
-you may be able to use my script in History2.xlsm
-then there is some manual filtering to be done
+Carefully copy all those rows into an Excel Macro enabled sheet. 
+Separate the columns into excel columns using seperate by space. I think it's called Text to Columns under the Data tab in Excel.
+Add coliumn titles and such, matching my History File.
+You can also add the actual date calculation but I never used that.
+Write a quick VBA script that deletes all rows not containing 'wikipedia'
+You may be able to aceses script in History2.xlsm.
+Then there is some manual filtering/deleting of rows to be done. For example deleting wiki picture URLs.
 
-edit my python file a bit to use your excel document file path
-add your known starting page to the line: urlTree = treeClimber('https://en.wikipedia.org/wiki/Drug_policy_of_South_Korea')
+Edit my python file a bit to use your excel document file path
+Add your known starting page to the line: urlTree = treeClimber('https://en.wikipedia.org/wiki/Drug_policy_of_South_Korea')
 
-run the python file. takes a bit
-copy paste json tree into flare-2.json here:
+Run the python file. It takes a bit. Check and try to minimize unused link length.
+Once, you are happy, copy paste json tree into flare-2.json here:
 https://vizhub.com/Christian-D2/32e6f8836cac463888b16718c2ee01b7
