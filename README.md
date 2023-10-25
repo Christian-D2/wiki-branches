@@ -27,4 +27,5 @@ edit my python file a bit to use your excel document file path
 add your known starting page to the line: urlTree = treeClimber('https://en.wikipedia.org/wiki/Drug_policy_of_South_Korea')
 
 run the python file. takes a bit
-copy paste json tree into 
+copy paste json tree into flare-2.json here:
+https://vizhub.com/Christian-D2/32e6f8836cac463888b16718c2ee01b7
