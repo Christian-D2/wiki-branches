@@ -28,4 +28,5 @@ Add your known starting page to the line: urlTree = treeClimber('https://en.wiki
 Run the python file. It takes a bit. Check and try to minimize unused link length.
 Once, you are happy, copy paste json tree into flare-2.json here:
 https://vizhub.com/Christian-D2/32e6f8836cac463888b16718c2ee01b7
-Be sure to ignore the loading lines |||
+Be sure to ignore the loading lines |||. 
+For some reason there was always one extra character somewhere in the JSON tree, so I used https://jsoneditoronline.org/ to find and fix that
